@@ -1,5 +1,5 @@
 void setup() {
-  //turns on the monitor to directly read out values
+  //turns the monitor on to directly read out values
   Serial.begin(9600);
   //the 3 LED pins
   pinMode(9, OUTPUT);
@@ -20,7 +20,7 @@ void loop() {
   int stickDown = digitalRead(4);
   int buttonDown = digitalRead(7);
 
-  //To check the variables work
+  //Prints the values on the monitor to check if the variables work
   Serial.print(stickUp);
   Serial.print(stickDown);
   Serial.println(buttonDown);
