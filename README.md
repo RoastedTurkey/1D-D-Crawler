@@ -26,5 +26,5 @@ In this insctructable we will go over how to connect buttons to the arduino and 
 
 2. Arduino/Circuit simulators:
   You can use one of these progams to simulate builds with code to see if things work. I would only recommend using this if you're missing parts or if....
-  https://circuits.io/
-  http://fritzing.org/download/
+  * https://circuits.io/
+  * http://fritzing.org/download/
