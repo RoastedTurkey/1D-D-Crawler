@@ -43,8 +43,7 @@ https://circuits.io/circuits/3843497-moving-a-light
 Get the FastLED library. You can download this from (link) or in the Ardiono program by going to Sketch > Include Library > Manage Libraries... 
 
 From there you type "FastLED" into the search bar at the top right, and then press "install".
-
-Then you want to go to File > Examples > FastLED (should be at/near the bottom) > Blink
+Then you want to go to File > Examples > FastLED (should be at/near the bottom) > Blink. 
 
 This Example makes the first LED in the strip blink red at an 500ms interval.
 #####Animating with arrays
