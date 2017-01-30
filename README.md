@@ -36,7 +36,10 @@ In this insctructable we will go over how to connect buttons to the arduino and 
 ###Tutorials:
 
 #####Stick & Button
+https://circuits.io/circuits/3837213-controller-circuit-test
 #####Moving a light
+https://circuits.io/circuits/3843497-moving-a-light
 #####FastLED & adressable RGB LED strip
 #####Animating with arrays
-#####dfshukf
+#####Final Code
+https://circuits.io/circuits/3844412-final-code-setup
