@@ -27,10 +27,6 @@ void setup() {
   pinMode(4, INPUT_PULLUP);
 //  // Button
 //  pinMode(7, INPUT_PULLUP);
-//  // Flex resistor
-//  pinMode(A0, INPUT_PULLUP);
-//  // LDR
-//  pinMode(A1, INPUT_PULLUP);
   // LED arrangement
   FastLED.addLeds<WS2801, DATA_PIN, CLOCK_PIN, BGR>(leds, NUM_LEDS);
   //putting frames in the flames
@@ -43,14 +39,6 @@ void setup() {
   int deadTimer = 0;
 
 void loop() {
-//  leds[0] = CRGB(255,0,0);
-//  FastLED.show();
-//  delay(500);
-//  
-//  leds[0] = CRGB(0,0,0);
-//  FastLED.show();
-//  delay(500);
-
   int stickUp = digitalRead(2);
   int stickDown = digitalRead(4);
   int buttonDown = digitalRead(7);
@@ -59,30 +47,28 @@ void loop() {
 //  Serial.print(stickUp);
 //  Serial.print(", down = ");
 //  Serial.println(stickDown);
-  Serial.print("pcPos = ");
-  Serial.print(pcPos);
-  Serial.print(", fire = ");
-  Serial.print(fireFrame);
-  Serial.print(", no fire= ");
-  Serial.print(fireWait);
-  Serial.print(", gameover = ");
-  Serial.print(gameOver);
-  Serial.print(", d.count = ");
-  Serial.println(deadTimer);
+//  Serial.print("pcPos = ");
+//  Serial.print(pcPos);
+//  Serial.print(", fire = ");
+//  Serial.print(fireFrame);
+//  Serial.print(", no fire= ");
+//  Serial.print(fireWait);
+//  Serial.print(", gameover = ");
+//  Serial.print(gameOver);
+//  Serial.print(", d.count = ");
+//  Serial.println(deadTimer);
   
   //Stick changing the player position
   if (dash == false && gameOver == false && nextLevel == false) {
     if (stickUp == 0) {
-//      pcPos = pcPos + pcSpeed;
-      pcPos++;
-        if (pcPos > NUM_LEDS - 1) {
-          pcPos = NUM_LEDS - 1;
-          nextLevel = true;
+      pcPos = pcPos + pcSpeed;
+      if (pcPos > NUM_LEDS - 1) {
+        pcPos = NUM_LEDS - 1;
+        nextLevel = true;
       }
     }
     else if (stickDown == 0) {
-//      pcPos = pcPos - pcSpeed;
-      pcPos = pcPos - 1;
+      pcPos = pcPos - pcSpeed;
       if (pcPos <0)  {
         pcPos = 0;
       }
@@ -150,5 +136,4 @@ void loop() {
     }
   }
   FastLED.show();
-//  delay(200);
-  }
+}
