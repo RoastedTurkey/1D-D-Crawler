@@ -40,6 +40,15 @@ https://circuits.io/circuits/3837213-controller-circuit-test
 #####Moving a light
 https://circuits.io/circuits/3843497-moving-a-light
 #####FastLED & adressable RGB LED strip
+Get the FastLED library. You can download this from (link) or in the Ardiono program by going to Sketch > Include Library > Manage Libraries... 
+
+From there you type "FastLED" into the search bar at the top right, and then press "install".
+
+Then you want to go to File > Examples > FastLED (should be at/near the bottom) > Blink
+
+This Example makes the first LED in the strip blink red at an 500ms interval.
 #####Animating with arrays
+You can animate lights by using an array to store frames, and using an integer to store the frame counter. Each array entry is an RGB value.
 #####Final Code
+This is the code I have so far.
 https://circuits.io/circuits/3844412-final-code-setup
