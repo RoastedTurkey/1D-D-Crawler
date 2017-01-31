@@ -29,6 +29,7 @@ void loop() {
   Serial.print(", ");
   Serial.println(pos);
   
+  //makes the buttons move the character
   if (left == 0) {
     pos = pos + speed;
     if (pos > 11) {
@@ -40,9 +41,12 @@ void loop() {
       pos = 2;
     }
   }
+  
+  // refreshing the "screen"
   for(int i = 2; i<12; i++){
     digitalWrite(i, LOW);
   }
+  // then showing the player's position
   digitalWrite(pos, HIGH);
 }
 
