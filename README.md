@@ -78,7 +78,18 @@ If the frame coutner is at the end, defined in the "if" statement (at line 39), 
 
 It also checks whether or not the inactive frames are at its defined end at the start, at line 34. I had to do thise because if I checked for frame counters differently they either wouldn't reset and get it would get stuck or I would have to write some seperate lines to check wether or not the counters had to be reset or not.
 #####Final Code
-This is the code I have so far.
 https://circuits.io/circuits/3844412-final-code-setup
 
-The yellow and orange cable symbolise the two cables that are from the LED strip.
+The yellow and orange cable symbolise the two cables from the LED strip, the power and the ground of the strip go to their own power source.
+
+This is the code I have so far. In here I use everything mentioned above plus some extra things;
+
+I addded gameover and level complete functionality, where it checks wether the player is standing in the fire while it's on, or if the player is at the end of the level (LED stip). For this I added an extra if statement at the start of the player movement, where it checks if "gameOver" or "nextLevel" is false. if they aren't, you cannot move.
+
+At lines 93, 94, and 95 it checks wether the players position is withing the coordinates of the fire, while the fire is at least at a certain active frame, and while inactive frames aren't being counted.
+
+Lower in the code, at lines 120 through 137, it again checks the "gameOver" and "nextLevel" booleans. This time, it checks if they are true. If they are, it floods the "leds" array (and thus the LED strip) with a colour (at lines 121 thrugh 128). While doing so it quickly checks wether it was "gameOver" or "nextLevel" that was true, and pushed the right colour accordingly.
+
+Then it starts a pause timer, in this case labled "deadTimer", this used to only be for the gameover functionality. At the end of the counter, defined within the if statement at line 130, it resets the player position to 1, turns "gameOver" and "nextLevel" back to fasle, resets the "deadTimer", and gives a new random starting coordinate withing a range to the fire or "lavaStart" variable.
+
+Just below the lines that control the player character (pc) there's some commented code that's setup to let the pc do a dodge move, but I haven't gotten around to write that. When I get around writing it I would employ something along the lines of creating a snapshot of the players position and direction of when they pressed the button. Then, it should quickly generate an animation array in which the pc moves fast at the start but slower at the tail-end of the roll, i.e. bigger "jumps" between lights at the start but smaller ones at the end.
