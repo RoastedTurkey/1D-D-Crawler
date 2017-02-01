@@ -1,6 +1,9 @@
 ## 1D-D-Crawler
 **Made by:** Adriaan van Oostveen
 
+#####Video:
+[![1 Dimensional Dungeon Crawler](http://img.youtube.com/vi/-Rq9jdyVrsU/0.jpg)](https://www.youtube.com/watch?v=-Rq9jdyVrsU "1 Dimensional Dungeon Crawler")
+
 ---
 ###Description:
 This is an instructable on how I made a one dimensional dungeon crawler and how to make one yourself.
@@ -93,3 +96,5 @@ Lower in the code, at lines 120 through 137, it again checks the "gameOver" and 
 Then it starts a pause timer, in this case labled "deadTimer", this used to only be for the gameover functionality. At the end of the counter, defined within the if statement at line 130, it resets the player position to 1, turns "gameOver" and "nextLevel" back to fasle, resets the "deadTimer", and gives a new random starting coordinate withing a range to the fire or "lavaStart" variable.
 
 Just below the lines that control the player character (pc) there's some commented code that's setup to let the pc do a dodge move, but I haven't gotten around to write that. When I get around writing it I would employ something along the lines of creating a snapshot of the players position and direction of when they pressed the button. Then, it should quickly generate an animation array in which the pc moves fast at the start but slower at the tail-end of the roll, i.e. bigger "jumps" between lights at the start but smaller ones at the end.
+###Closing words:
+I hope you liked this instructable, and that you found it informative. Good luck with your own project!
